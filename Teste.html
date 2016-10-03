@@ -118,24 +118,43 @@
 
 
 	</style>
+<script type="text/javascript">
+	function MostraDiv(divMostrar)
+	{
+		//alert(document.getElementById("div1").style.display);
+		if (divMostrar == '1')
+		{
+			document.getElementById("div1").style.display = "block";
+			document.getElementById("div2").style.display = "none";
+		}
+		else
+		{
+			document.getElementById("div1").style.display = "none";
+			document.getElementById("div2").style.display = "table";
+		}
+	}
 
+</script>
 
 </head>
 <body>
-<form>
-<!--
-	<div class="shadow2">
+<form id="form1">
+
+<input type="button" name="btn1" Value="Mostrar Div 1" onclick="javascript:MostraDiv('1');">
+<input type="button" name="btn2" Value="Mostrar Div 2" onclick="javascript:MostraDiv('2');">
+
+	<div class="shadow2" id="div1">
 		<div class="botao">
 			<font>.</font>
 		</div>
 	</div>
-	-->
+	
 	<br>
 	<br>
 	<br>
 	<br>
 	<br>
-	<table class="TabelaTeste" cellspacing="0" width="80%">
+	<table class="TabelaTeste" id="div2" cellspacing="0" width="80%" style="display: none;">
 		<tr>
 			<th width="20%">Coluna 1</td>
 			<th width="20%">Coluna 2</td>
